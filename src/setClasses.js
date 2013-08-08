@@ -24,11 +24,10 @@ define(['Modernizr', 'docElement'], function( Modernizr, docElement ) {
 
       // Then add the new...
       className += ' ' + classes.join(' ' + (Modernizr._config.classPrefix || ''));
-
-      // Apply
-      docElement.className = className;
     }
 
+    // Apply (do this regardless of the `enableClasses` option)
+    docElement.className = className;
   }
 
   return setClasses;
